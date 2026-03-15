@@ -57,6 +57,7 @@ export default function LeadCaptureLightbox() {
             const result = await sendEmailAction({
                 user_company: formData.get('user_company') as string,
                 user_email: formData.get('user_email') as string,
+                user_country: formData.get('user_country') as string,
                 inquiry_type: formData.get('inquiry_type') as string,
             });
 

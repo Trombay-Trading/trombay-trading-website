@@ -1,37 +1,42 @@
 'use client';
-import { Gem, Layers, PenTool, Tag, ShieldCheck, Scissors } from 'lucide-react';
+import { Globe, Truck, Tag, ShieldCheck, Layers, FileText, Handshake } from 'lucide-react';
 
 export default function TrustSignals() {
     const signals = [
         {
-            icon: Gem,
-            title: "Premium Materials",
-            desc: "Sourcing the finest full-grain and top-grain hides from elite global tanneries."
+            icon: Globe,
+            title: "Trusted Sourcing Network",
+            desc: "Access to certified tanneries and specialized manufacturers across India."
         },
         {
-            icon: Layers,
-            title: "Vast Product Line",
-            desc: "Manufacturing a diverse range of specialty leather goods to match your specifications."
-        },
-        {
-            icon: PenTool,
-            title: "Master Craftsmanship",
-            desc: "Decades of heritage expertise ready to tackle projects of any scale or complexity."
+            icon: Truck,
+            title: "Export-Ready Supply Chain",
+            desc: "Structured procurement, production coordination, and global shipping support."
         },
         {
             icon: Tag,
-            title: "Private Labeling",
-            desc: "End-to-end white label manufacturing that reduces your procurement and production costs."
+            title: "Custom & Private Label",
+            desc: "Manufacturing tailored to your technical packs, branding, and market standards."
         },
         {
             icon: ShieldCheck,
-            title: "Rigorous Quality",
-            desc: "Multi-tiered inspection systems ensuring flawless conformance at every stage of production."
+            title: "Consistent Quality Assurance",
+            desc: "Multi-level inspection and strict material selection at every stage."
         },
         {
-            icon: Scissors,
-            title: "Bespoke Production",
-            desc: "Custom manufacturing expertise designed to integrate seamlessly into your brand's existing lines."
+            icon: Layers,
+            title: "Scalable Order Capacity",
+            desc: "From small batches to large wholesale volumes, delivered with reliability."
+        },
+        {
+            icon: FileText,
+            title: "Professional Trade Handling",
+            desc: "Complete support for export documentation, compliance, and logistics."
+        },
+        {
+            icon: Handshake,
+            title: "Long-Term Partnership",
+            desc: "We work as a sourcing and production partner — not just a supplier."
         }
     ];
 
@@ -54,8 +59,8 @@ export default function TrustSignals() {
                         return (
                             <div
                                 key={idx}
-                                className={`flex flex-col items-center text-center px-4 sm:px-8 ${idx % 3 !== 2 ? 'md:border-r border-brand-200' : ''
-                                    }`}
+                                className={`flex flex-col items-center text-center px-4 sm:px-8 ${idx % 3 !== 2 && idx !== signals.length - 1 ? 'md:border-r border-brand-200' : ''
+                                    } ${(idx === signals.length - 1) ? 'md:col-span-3 lg:col-span-1 lg:col-start-2' : ''}`}
                             >
                                 <div className="mb-6 text-brand-900">
                                     <Icon className="w-10 h-10" strokeWidth={1.5} />

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Eczar } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadCaptureLightbox from '@/components/LeadCaptureLightbox'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair-display' })
+const eczar = Eczar({ subsets: ['latin'], variable: '--font-eczar' })
 
 export const metadata: Metadata = {
     title: 'Trombay Trading | Premium Leather Manufacturing',
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} ${playfair.variable} font-sans bg-brand-50 text-brand-900 min-h-screen flex flex-col`}>
+            <body className={`${inter.variable} ${eczar.variable} font-sans bg-brand-50 text-brand-900 min-h-screen flex flex-col`}>
                 <Navbar />
                 <main className="flex-grow">
                     {children}

@@ -19,7 +19,13 @@ export default function EnquiryForm() {
                 user_lastname: formData.get('user_lastname') as string,
                 user_company: formData.get('user_company') as string,
                 user_email: formData.get('user_email') as string,
+                user_phone: formData.get('user_phone') as string,
+                user_country: formData.get('user_country') as string,
+                business_type: formData.get('business_type') as string,
                 inquiry_type: formData.get('inquiry_type') as string,
+                order_volume: formData.get('order_volume') as string,
+                timeline: formData.get('timeline') as string,
+                hear_about_us: formData.get('hear_about_us') as string,
                 message: formData.get('message') as string,
             });
 

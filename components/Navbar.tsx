@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -13,10 +13,10 @@ export default function Navbar() {
     };
 
     const navLinks = [
-        { name: 'Maison', href: '/about' },
-        { name: 'Collections', href: '/products' },
-        { name: 'Heritage', href: '/sustainability' },
-        { name: 'Journal', href: '/blog' },
+        { name: 'About Us', href: '#about' },
+        { name: 'Services', href: '#services' },
+        { name: 'Clients', href: '#clients' },
+        { name: 'Products', href: '/products' },
     ];
 
     return (
@@ -25,8 +25,11 @@ export default function Navbar() {
                 <div className="flex justify-between items-center h-24">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="font-serif text-3xl font-semibold text-brand-900 tracking-tight">
-                            Trombay<span className="text-brand-500 font-serif italic ml-1">Trading.</span>
+                        <Link href="/" className="font-serif text-3xl font-semibold text-brand-900 tracking-tight flex flex-col leading-none">
+                            <span className="flex items-center">
+                                Tr<Globe className="w-5 h-5 mx-[1px] text-brand-500 mb-1" strokeWidth={2.5} />mbay
+                            </span>
+                            <span className="text-brand-500 font-serif">Trading.</span>
                         </Link>
                     </div>
 
@@ -46,9 +49,9 @@ export default function Navbar() {
                     {/* Actions */}
                     <div className="hidden md:flex items-center space-x-6">
                         <div className="flex items-center space-x-4 text-xs text-brand-600 uppercase tracking-widest">
-                            <a href="mailto:contact@trombaytrading.com" className="hover:text-brand-400 flex items-center gap-2 transition-colors">
+                            <Link href="/contact" className="hover:text-brand-400 flex items-center gap-2 transition-colors">
                                 <span>Enquire</span>
-                            </a>
+                            </Link>
                         </div>
                         <Link
                             href="#inquiry"
@@ -100,8 +103,8 @@ export default function Navbar() {
                                     Get a Quote
                                 </Link>
                                 <div className="mt-6 text-center">
-                                    <a href="mailto:contact@trombaytrading.com" className="text-xs text-brand-500 uppercase tracking-widest">
-                                        contact@trombaytrading.com
+                                    <a href="mailto:thetrombaytradingcompany@gmail.com" className="text-xs text-brand-500 uppercase tracking-widest">
+                                        thetrombaytradingcompany@gmail.com
                                     </a>
                                 </div>
                             </div>

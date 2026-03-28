@@ -13,7 +13,7 @@ module.exports = {
           200: '#e5e1db',  // Muted beige
           300: '#d1c8bd',  // Sand
           400: '#c1a86a',  // Muted yellow
-          500: '#8c7a6b',  // goldish brown
+          500: '#c1a86a',  // User requested yellow
           600: '#736153',  // Darker taupe
           700: '#4a4138',  // Very dark brown
           800: '#2b3344',  // Deep Blue/slate
@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        serif: ['var(--font-eczar)', 'serif'],
+        serif: ['"Google Sans"', 'sans-serif'],
       },
     },
   },

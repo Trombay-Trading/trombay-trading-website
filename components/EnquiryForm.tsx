@@ -44,9 +44,9 @@ export default function EnquiryForm() {
 
     if (status === 'success') {
         return (
-            <div className="bg-brand-50 p-8 text-center border border-brand-200">
+            <div className="bg-brand-50/70 backdrop-blur-md rounded-2xl p-8 text-center border border-brand-200">
                 <h3 className="font-serif text-2xl text-brand-900 mb-4">Inquiry Received</h3>
-                <p className="text-brand-600 font-light mb-6">Thank you for your interest in Trombay Trading. One of our representatives will contact you shortly.</p>
+                <p className="text-brand-600 font-medium mb-6">Thank you for your interest in Trombay Trading. One of our representatives will contact you shortly.</p>
                 <button
                     onClick={() => setStatus('idle')}
                     className="text-xs uppercase tracking-widest text-brand-700 hover:text-brand-900 border-b border-brand-300 hover:border-brand-900 pb-1 transition-all"
@@ -58,47 +58,47 @@ export default function EnquiryForm() {
     }
 
     return (
-        <form ref={formRef} onSubmit={handleSubmit} className="bg-white p-8 md:p-12 border border-brand-200 shadow-xl shadow-brand-900/5 max-w-2xl mx-auto">
+        <form ref={formRef} onSubmit={handleSubmit} className="bg-white/70 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-brand-200 shadow-xl shadow-brand-900/5 max-w-2xl mx-auto">
             <h3 className="font-serif text-3xl text-brand-900 mb-2">Request a Quote</h3>
-            <p className="text-brand-600 text-sm font-light mb-8">Please provide your details and requirements for our B2B wholesale divisions.</p>
+            <p className="text-brand-600 text-sm font-medium mb-8">Please provide your details and requirements for our B2B wholesale divisions.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                     <label htmlFor="firstName" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">First Name *</label>
-                    <input required type="text" id="firstName" name="user_firstname" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light" />
+                    <input required type="text" id="firstName" name="user_firstname" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium" />
                 </div>
                 <div>
                     <label htmlFor="lastName" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Last Name *</label>
-                    <input required type="text" id="lastName" name="user_lastname" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light" />
+                    <input required type="text" id="lastName" name="user_lastname" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium" />
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                     <label htmlFor="company" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Company Name *</label>
-                    <input required type="text" id="company" name="user_company" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light" />
+                    <input required type="text" id="company" name="user_company" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium" />
                 </div>
                 <div>
                     <label htmlFor="email" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Work Email *</label>
-                    <input required type="email" id="email" name="user_email" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light" />
+                    <input required type="email" id="email" name="user_email" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium" />
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div>
                     <label htmlFor="phone" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Phone / WhatsApp</label>
-                    <input type="tel" id="phone" name="user_phone" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light" />
+                    <input type="tel" id="phone" name="user_phone" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium" />
                 </div>
                 <div>
                     <label htmlFor="country" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Country / Region *</label>
-                    <input required type="text" id="country" name="user_country" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light" />
+                    <input required type="text" id="country" name="user_country" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium" />
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                     <label htmlFor="business_type" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Business Type *</label>
-                    <select required id="business_type" name="business_type" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light appearance-none">
+                    <select required id="business_type" name="business_type" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium appearance-none">
                         <option value="">Select</option>
                         <option value="Manufacturer">Manufacturer</option>
                         <option value="Retailer">Retailer</option>
@@ -110,7 +110,7 @@ export default function EnquiryForm() {
                 </div>
                 <div>
                     <label htmlFor="interest" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Area of Interest *</label>
-                    <select required id="interest" name="inquiry_type" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light appearance-none">
+                    <select required id="interest" name="inquiry_type" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium appearance-none">
                         <option value="">Select a category</option>
                         <option value="Finished Hides & Tannery">Finished Hides & Tannery</option>
                         <option value="Leather Apparel">Leather Apparel</option>
@@ -123,7 +123,7 @@ export default function EnquiryForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div>
                     <label htmlFor="order_volume" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Estimated Order Volume *</label>
-                    <select required id="order_volume" name="order_volume" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light appearance-none">
+                    <select required id="order_volume" name="order_volume" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium appearance-none">
                         <option value="">Select volume</option>
                         <option value="Sample">Sample</option>
                         <option value="Small order (<100 units)">Small order (&lt;100 units)</option>
@@ -134,7 +134,7 @@ export default function EnquiryForm() {
                 </div>
                 <div>
                     <label htmlFor="timeline" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Required Timeline *</label>
-                    <select required id="timeline" name="timeline" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light appearance-none">
+                    <select required id="timeline" name="timeline" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium appearance-none">
                         <option value="">Select timeline</option>
                         <option value="Urgent">Urgent</option>
                         <option value="Within 1 month">Within 1 month</option>
@@ -146,7 +146,7 @@ export default function EnquiryForm() {
 
             <div className="mb-10">
                 <label htmlFor="hear_about_us" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">How did you hear about us?</label>
-                <select id="hear_about_us" name="hear_about_us" className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light appearance-none">
+                <select id="hear_about_us" name="hear_about_us" className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium appearance-none">
                     <option value="">Select option (Optional)</option>
                     <option value="Google">Google</option>
                     <option value="Referral">Referral</option>
@@ -158,13 +158,13 @@ export default function EnquiryForm() {
 
             <div className="mb-10">
                 <label htmlFor="message" className="block text-xs uppercase tracking-widest text-brand-700 mb-2">Project Details</label>
-                <textarea id="message" name="message" rows={4} className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light resize-none placeholder-brand-300" placeholder="Please describe your volume requirements and timeline..."></textarea>
+                <textarea id="message" name="message" rows={4} className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium resize-none placeholder-brand-300" placeholder="Please describe your volume requirements and timeline..."></textarea>
             </div>
 
             <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="w-full bg-brand-900 text-brand-50 hover:bg-brand-800 py-4 text-xs font-medium uppercase tracking-widest transition-colors disabled:opacity-70 flex justify-center items-center"
+                className="w-full bg-brand-900 text-brand-50 hover:bg-brand-800 py-4 rounded-lg text-xs font-medium uppercase tracking-widest transition-colors disabled:opacity-70 flex justify-center items-center"
             >
                 {status === 'submitting' ? (
                     <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} className="w-4 h-4 border-2 border-brand-50 border-t-transparent rounded-full" />

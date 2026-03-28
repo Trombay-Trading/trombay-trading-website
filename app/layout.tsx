@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Eczar } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadCaptureLightbox from '@/components/LeadCaptureLightbox'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const eczar = Eczar({ subsets: ['latin'], variable: '--font-eczar' })
 
 export const metadata: Metadata = {
     title: 'Trombay Trading | Premium Leather Manufacturing',
@@ -20,7 +19,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} ${eczar.variable} font-sans bg-brand-50 text-brand-900 min-h-screen flex flex-col`}>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet" />
+            </head>
+            <body className={`${inter.variable} font-sans bg-brand-50 text-brand-900 min-h-screen flex flex-col`}>
                 <Navbar />
                 <main className="flex-grow">
                     {children}

@@ -16,19 +16,17 @@ export default function Navbar() {
         { name: 'About Us', href: '#about' },
         { name: 'Services', href: '#services' },
         { name: 'Clients', href: '#clients' },
-        { name: 'Products', href: '/products' },
+        { name: 'Blogs', href: '/blogs' },
     ];
 
     return (
-        <header className="bg-brand-50 border-b border-brand-200 sticky top-0 z-50">
+        <header className="bg-brand-50/80 backdrop-blur-md border-b border-brand-200 sticky top-0 z-50 transition-all duration-300">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-24">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="font-serif text-3xl font-semibold text-brand-900 tracking-tight flex flex-col leading-none">
-                            <span className="flex items-center">
-                                Tr<Globe className="w-5 h-5 mx-[1px] text-brand-500 mb-1" strokeWidth={2.5} />mbay
-                            </span>
+                            <span>Trombay</span>
                             <span className="text-brand-500 font-serif">Trading.</span>
                         </Link>
                     </div>
@@ -39,7 +37,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-brand-700 hover:text-brand-500 font-medium uppercase tracking-widest transition-colors text-xs"
+                                className="text-lg font-medium text-brand-700 hover:text-brand-900 transition-colors"
                             >
                                 {link.name}
                             </Link>
@@ -48,14 +46,14 @@ export default function Navbar() {
 
                     {/* Actions */}
                     <div className="hidden md:flex items-center space-x-6">
-                        <div className="flex items-center space-x-4 text-xs text-brand-600 uppercase tracking-widest">
+                        <div className="flex items-center space-x-4 text-sm text-brand-600 uppercase tracking-widest">
                             <Link href="/contact" className="hover:text-brand-400 flex items-center gap-2 transition-colors">
-                                <span>Enquire</span>
+                                <span>Contact Us</span>
                             </Link>
                         </div>
                         <Link
                             href="#inquiry"
-                            className="bg-brand-900 border border-brand-900 hover:bg-transparent hover:text-brand-900 text-brand-50 px-6 py-2.5 rounded font-medium text-xs uppercase tracking-widest transition-all duration-300"
+                            className="bg-brand-900 border border-brand-900 hover:bg-transparent hover:text-brand-900 text-brand-50 px-6 py-2.5 rounded-md font-medium text-sm uppercase tracking-widest transition-all duration-300"
                         >
                             Get a Quote
                         </Link>
@@ -89,7 +87,7 @@ export default function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block px-3 py-4 text-base font-serif text-brand-900 border-b border-brand-200/50 hover:bg-brand-100 hover:text-brand-500 transition-colors"
+                                    className="block px-3 py-4 text-xl font-serif text-brand-900 border-b border-brand-200/50 hover:bg-brand-100 hover:text-brand-500 transition-colors"
                                 >
                                     {link.name}
                                 </Link>
@@ -98,15 +96,10 @@ export default function Navbar() {
                                 <Link
                                     href="#inquiry"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block w-full text-center bg-brand-900 text-brand-50 px-6 py-4 rounded font-medium text-xs uppercase tracking-widest"
+                                    className="block w-full text-center bg-brand-900 text-brand-50 px-6 py-4 rounded-md font-medium text-sm uppercase tracking-widest"
                                 >
                                     Get a Quote
                                 </Link>
-                                <div className="mt-6 text-center">
-                                    <a href="mailto:thetrombaytradingcompany@gmail.com" className="text-xs text-brand-500 uppercase tracking-widest">
-                                        thetrombaytradingcompany@gmail.com
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </motion.div>

@@ -39,7 +39,7 @@ export default function HowWeWork() {
                     >
                         <div className="absolute inset-0 bg-brand-900/10 transition-all duration-700 z-10"></div>
                         <div className="absolute inset-0 flex items-center justify-center bg-brand-200">
-                            <span className="font-serif italic text-brand-500 opacity-60">Factory Floor Operations</span>
+                            <span className="font-serif text-brand-500 opacity-60">Factory Floor Operations</span>
                         </div>
                         {/* Outline accent */}
                         <div className="absolute top-4 left-4 bottom-4 right-4 border border-brand-50/30 z-20 pointer-events-none"></div>
@@ -69,7 +69,7 @@ export default function HowWeWork() {
                                 {/* Content */}
                                 <div className="pt-2 sm:pt-4">
                                     <h4 className="font-serif text-2xl text-brand-900 mb-3">{step.title}</h4>
-                                    <p className="text-brand-600 font-light text-sm leading-relaxed max-w-md">{step.desc}</p>
+                                    <p className="text-brand-600 font-medium text-sm leading-relaxed max-w-md">{step.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

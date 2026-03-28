@@ -99,7 +99,7 @@ export default function LeadCaptureLightbox() {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
                         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                        className="relative w-full max-w-lg bg-brand-50 shadow-2xl overflow-hidden border border-brand-200"
+                        className="relative w-full max-w-lg bg-brand-50/90 backdrop-blur-xl shadow-2xl overflow-hidden border border-brand-200 rounded-2xl"
                     >
                         <button
                             onClick={handleClose}
@@ -112,12 +112,12 @@ export default function LeadCaptureLightbox() {
                         {status === 'success' ? (
                             <div className="p-10 text-center">
                                 <h3 className="font-serif text-3xl text-brand-900 mb-4">Request Received</h3>
-                                <p className="text-brand-600 font-light mb-8">
+                                <p className="text-brand-600 font-medium mb-8">
                                     Our wholesale team will contact you shortly with catalog access and pricing information.
                                 </p>
                                 <button
                                     onClick={handleClose}
-                                    className="bg-brand-900 text-brand-50 px-8 py-3 text-xs uppercase tracking-widest hover:bg-brand-800 transition-colors"
+                                    className="bg-brand-900 text-brand-50 rounded-lg px-8 py-3 text-xs uppercase tracking-widest hover:bg-brand-800 transition-colors"
                                 >
                                     Return to Site
                                 </button>
@@ -127,7 +127,7 @@ export default function LeadCaptureLightbox() {
                                 <div className="bg-brand-900 text-brand-50 p-8 text-center relative overflow-hidden">
                                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_100%)]"></div>
                                     <h3 className="font-serif text-3xl mb-3 relative z-10">Access the Collections</h3>
-                                    <p className="text-brand-200 text-sm font-light relative z-10 max-w-sm mx-auto">
+                                    <p className="text-brand-200 text-sm font-medium relative z-10 max-w-sm mx-auto">
                                         Register as a B2B partner to view our complete premium leather catalog and wholesale pricing.
                                     </p>
                                 </div>
@@ -140,7 +140,7 @@ export default function LeadCaptureLightbox() {
                                                 type="email"
                                                 name="user_email"
                                                 placeholder="Work Email Address *"
-                                                className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light placeholder-brand-400"
+                                                className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium placeholder-brand-400"
                                             />
                                         </div>
                                         <div>
@@ -149,7 +149,7 @@ export default function LeadCaptureLightbox() {
                                                 type="text"
                                                 name="user_company"
                                                 placeholder="Company Name *"
-                                                className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light placeholder-brand-400"
+                                                className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium placeholder-brand-400"
                                             />
                                         </div>
                                         <div>
@@ -158,7 +158,7 @@ export default function LeadCaptureLightbox() {
                                                 type="text"
                                                 name="user_country"
                                                 placeholder="Country / Region *"
-                                                className="w-full border-b border-brand-300 bg-transparent py-2 focus:outline-none focus:border-brand-900 transition-colors text-brand-900 font-light placeholder-brand-400"
+                                                className="w-full border border-brand-300 rounded-lg bg-white/50 px-4 py-3 focus:outline-none focus:border-brand-900 focus:bg-white/80 transition-colors text-brand-900 font-medium placeholder-brand-400"
                                             />
                                         </div>
                                     </div>
@@ -168,13 +168,13 @@ export default function LeadCaptureLightbox() {
                                     <button
                                         type="submit"
                                         disabled={status === 'submitting'}
-                                        className="w-full bg-brand-900 text-brand-50 hover:bg-brand-800 py-4 text-xs font-medium uppercase tracking-widest transition-colors disabled:opacity-70 flex justify-center items-center shadow-md"
+                                        className="w-full bg-brand-900 text-brand-50 rounded-lg hover:bg-brand-800 py-4 text-xs font-medium uppercase tracking-widest transition-colors disabled:opacity-70 flex justify-center items-center shadow-md"
                                     >
                                         {status === 'submitting' ? (
                                             <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} className="w-4 h-4 border-2 border-brand-50 border-t-transparent rounded-full" />
                                         ) : "Request Catalog"}
                                     </button>
-                                    <p className="text-center text-xs text-brand-400 mt-4 font-light">
+                                    <p className="text-center text-xs text-brand-400 mt-4 font-medium">
                                         By submitting, you agree to our B2B terms of service.
                                     </p>
                                 </form>

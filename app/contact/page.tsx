@@ -14,8 +14,8 @@ export default function ContactPage() {
             <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80"
-                        alt="Professional Office Space"
+                        src="/images/port-containers-1.jpg"
+                        alt="Trombay Trading Operations port"
                         className="object-cover w-full h-full opacity-80"
                     />
                     <div className="absolute inset-0 bg-brand-950/70 mix-blend-multiply"></div>
@@ -23,9 +23,9 @@ export default function ContactPage() {
 
                 <div className="relative z-10 text-center container mx-auto px-4">
                     <h1 className="font-serif text-5xl md:text-6xl text-brand-50 mb-6 font-semibold tracking-tight">
-                        Contact <span className="italic text-brand-400">Us</span>
+                        Contact <span className="text-brand-400">Us</span>
                     </h1>
-                    <p className="text-xl text-brand-200 max-w-2xl mx-auto font-light">
+                    <p className="text-xl text-brand-200 max-w-2xl mx-auto font-medium">
                         Connect with our team for bespoke manufacturing, wholesale inquiries, or to discuss a potential partnership.
                     </p>
                 </div>
@@ -38,14 +38,9 @@ export default function ContactPage() {
 
                         {/* Contact Information */}
                         <div className="lg:col-span-5 space-y-12">
-                            <div>
-                                <h2 className="text-3xl font-serif text-brand-900 mb-6 font-medium">Get in Touch</h2>
-                                <p className="text-brand-700 leading-relaxed mb-8">
-                                    We look forward to hearing from you. Whether you are interested in our products or require custom manufacturing solutions, our dedicated team is here to assist you.
-                                </p>
-                            </div>
+                            {/* Removed text block */}
 
-                            <div className="space-y-8 bg-white p-8 border border-brand-200 shadow-sm rounded-sm">
+                            <div className="space-y-8 bg-white p-8 border border-brand-200 shadow-sm rounded-xl">
 
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0 mt-1">
@@ -103,34 +98,21 @@ export default function ContactPage() {
 
                             </div>
 
-                            <div className="bg-white p-8 border border-brand-200 shadow-sm rounded-sm mt-8">
-                                <h3 className="text-xl font-medium text-brand-900 mb-2 font-serif">Schedule a Meeting</h3>
-                                <p className="text-brand-700 mb-6">
-                                    Book a 30-minute consultation directly with our team at your convenience.
-                                </p>
-                                <a
-                                    href="https://calendly.com/thetrombaytradingcompany/30min"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex justify-center items-center bg-brand-900 text-brand-50 hover:bg-brand-800 px-6 py-3 text-xs font-medium uppercase tracking-widest transition-all duration-300 w-full"
-                                >
-                                    Book on Calendly
-                                </a>
-                            </div>
-
-                            <div className="relative h-64 w-full rounded-sm overflow-hidden border border-brand-200 mt-8">
-                                <img
-                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80"
-                                    alt="Business Meeting"
-                                    className="object-cover w-full h-full"
-                                />
+                            <div className="bg-white p-2 border border-brand-200 shadow-sm rounded-xl mt-8 w-full overflow-hidden">
+                                <iframe
+                                    src="https://calendly.com/thetrombaytradingcompany/30min"
+                                    width="100%"
+                                    height="700"
+                                    frameBorder="0"
+                                    title="Schedule a Meeting"
+                                ></iframe>
                             </div>
 
                         </div>
 
                         {/* Enquiry Form */}
                         <div className="lg:col-span-7">
-                            <div className="bg-white p-8 md:p-12 border border-brand-200 shadow-xl rounded-sm">
+                            <div className="bg-white p-8 md:p-12 border border-brand-200 shadow-xl rounded-xl">
                                 <div className="mb-8">
                                     <h2 className="text-3xl font-serif text-brand-900 mb-4 font-medium">Send an Enquiry</h2>
                                     <p className="text-brand-600">

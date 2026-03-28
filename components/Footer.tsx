@@ -44,7 +44,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-sm text-brand-200 font-light">
                             <li><a href="mailto:thetrombaytradingcompany@gmail.com" className="hover:text-brand-50 transition-colors">thetrombaytradingcompany@gmail.com</a></li>
                             <li><a href="tel:+919321623552" className="hover:text-brand-50 transition-colors">+91 9321623552</a></li>
-                            <li className="leading-relaxed">Business hours: Mon to Sat - 9 am to 9 pm</li>
+                            <li className="leading-relaxed">Business hours: 3:30 AM to 3:30 PM GMT</li>
                             <li className="leading-relaxed">Noor House, Azad Nagar, Payali Pada<br />Trombay, Mumbai, Maharashtra<br />India, 400088</li>
                         </ul>
                     </div>

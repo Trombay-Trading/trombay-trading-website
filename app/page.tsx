@@ -27,8 +27,8 @@ export default function Home() {
                             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         >
                             <h2 className="text-brand-400 uppercase tracking-[0.2em] text-xs font-semibold mb-6">Precision Manufacturing</h2>
-                            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-brand-50 mb-8 leading-tight tracking-tight">
-                                Indian <span className="italic font-light text-brand-200">Perfectionism.</span> Engineered for the World.
+                            <h1 className="font-sans text-brand-50 mb-8 leading-tight tracking-tight text-5xl md:text-6xl lg:text-7xl font-semibold">
+                                Indian Perfectionism. Engineered for the World.
                             </h1>
                         </motion.div>
 

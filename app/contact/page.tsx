@@ -96,15 +96,29 @@ export default function ContactPage() {
                                     <div className="ml-4">
                                         <h3 className="text-lg font-medium text-brand-900 mb-2">Business Hours</h3>
                                         <p className="text-brand-700">
-                                            Monday to Saturday<br />
-                                            9:00 AM - 9:00 PM (IST)
+                                            3:30 AM to 3:30 PM GMT
                                         </p>
                                     </div>
                                 </div>
 
                             </div>
 
-                            <div className="relative h-64 w-full rounded-sm overflow-hidden border border-brand-200">
+                            <div className="bg-white p-8 border border-brand-200 shadow-sm rounded-sm mt-8">
+                                <h3 className="text-xl font-medium text-brand-900 mb-2 font-serif">Schedule a Meeting</h3>
+                                <p className="text-brand-700 mb-6">
+                                    Book a 30-minute consultation directly with our team at your convenience.
+                                </p>
+                                <a
+                                    href="https://calendly.com/thetrombaytradingcompany/30min"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex justify-center items-center bg-brand-900 text-brand-50 hover:bg-brand-800 px-6 py-3 text-xs font-medium uppercase tracking-widest transition-all duration-300 w-full"
+                                >
+                                    Book on Calendly
+                                </a>
+                            </div>
+
+                            <div className="relative h-64 w-full rounded-sm overflow-hidden border border-brand-200 mt-8">
                                 <img
                                     src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80"
                                     alt="Business Meeting"

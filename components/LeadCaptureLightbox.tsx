@@ -10,13 +10,13 @@ export default function LeadCaptureLightbox() {
     const [hasDismissed, setHasDismissed] = useState(false);
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
-    // Trigger lightbox after 15 seconds or on exit intent
+    // Trigger lightbox after 7.5 seconds or on exit intent
     useEffect(() => {
         if (hasDismissed) return;
 
         const timer = setTimeout(() => {
             setIsOpen(true);
-        }, 15000);
+        }, 7500);
 
         const handleMouseLeave = (e: MouseEvent) => {
             if (e.clientY <= 0 && !hasDismissed) {

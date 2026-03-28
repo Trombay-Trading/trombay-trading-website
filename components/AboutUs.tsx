@@ -20,8 +20,8 @@ export default function AboutUs() {
                             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         >
                             <h2 className="text-brand-500 uppercase tracking-[0.2em] text-xs font-semibold mb-6">Who We Are</h2>
-                            <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-900 mb-8 leading-tight">
-                                Your Trusted Partner in <br /><span className="font-medium text-brand-500">Global Trade.</span>
+                            <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-900 mb-8 leading-tight">
+                                Your Trusted Partner in <br className="block" /><span className="font-medium text-brand-500">Global Trade.</span>
                             </h3>
 
                             <div className="space-y-6 text-brand-700 font-medium text-lg leading-relaxed max-w-2xl">

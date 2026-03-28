@@ -34,7 +34,7 @@ export default function TargetAudience() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.03)_0%,transparent_60%)] pointer-events-none z-0"></div>
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent opacity-50 z-0"></div>
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-[1400px]">
 
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <motion.div
@@ -53,7 +53,7 @@ export default function TargetAudience() {
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-20">
                     {clients.map((client, idx) => {
                         const Icon = client.icon;
                         return (
@@ -63,18 +63,20 @@ export default function TargetAudience() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                                 key={idx}
-                                className="group bg-brand-900 border border-brand-800 rounded-xl p-6 hover:bg-brand-800/80 transition-all duration-500 flex flex-row items-center gap-6 h-full text-left"
+                                className="group bg-brand-900 border border-brand-800 rounded-2xl p-8 hover:bg-brand-800/80 transition-all duration-500 h-full text-left"
                             >
-                                <div className="flex-shrink-0">
-                                    <div className="w-12 h-12 rounded-lg border border-brand-600 flex items-center justify-center text-brand-300 group-hover:scale-110 transition-transform duration-500 bg-brand-950">
-                                        <Icon className="w-5 h-5" strokeWidth={1.5} />
+                                <div className="flex flex-row items-start gap-6">
+                                    <div className="flex-shrink-0">
+                                        <div className="w-14 h-14 rounded-lg border border-brand-600 flex items-center justify-center text-brand-300 group-hover:scale-110 transition-transform duration-500 bg-brand-950">
+                                            <Icon className="w-6 h-6" strokeWidth={1.5} />
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <h4 className="font-serif text-lg text-brand-50 mb-2">{client.title}</h4>
-                                    <p className="text-brand-300 font-medium text-sm leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity duration-300 m-0">
-                                        {client.desc}
-                                    </p>
+                                    <div className="flex flex-col">
+                                        <h4 className="font-serif text-xl sm:text-2xl text-brand-50 m-0 leading-tight block mb-3">{client.title}</h4>
+                                        <p className="text-brand-300 font-normal text-base leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity duration-300 m-0">
+                                            {client.desc}
+                                        </p>
+                                    </div>
                                 </div>
                             </motion.div>
                         );

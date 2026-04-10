@@ -13,10 +13,10 @@ export default function Navbar() {
     };
 
     const navLinks = [
-        { name: 'About Us', href: '#about' },
-        { name: 'Services', href: '#services' },
-        { name: 'Clients', href: '#clients' },
-        { name: 'Blogs', href: '/blogs' },
+        { name: 'About Us', href: '/#about' },
+        { name: 'Services', href: '/#services' },
+        { name: 'Clients', href: '/#clients' },
+        { name: 'Blogs', href: '/blog' },
     ];
 
     return (
